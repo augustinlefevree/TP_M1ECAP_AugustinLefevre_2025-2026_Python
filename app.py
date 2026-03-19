@@ -7,7 +7,7 @@ import dash
 from dash import html, dcc, dash_table, Input, Output
 import dash_bootstrap_components as dbc
 
-server = app.server
+
 
 # PREPARATION DONNEES --------------------------
 df = pd.read_csv("data.csv")
@@ -230,6 +230,7 @@ def table_last_100(data, current_month):
 # TABLEAU DE BORD ------------------------------------------------
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 zone_options = [
     {"label": z, "value": z}
